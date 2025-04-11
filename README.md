@@ -1,13 +1,13 @@
 # Ride Management API
 
-A RESTful API built with Django REST Framework for managing ride information, with a React frontend using Tailwind CSS.
+A RESTful API built with Django REST Framework for managing ride information.
 
 ## Setup
 
 1. Clone the repository
 2. Install dependencies:
    ```
-   pip install django djangorestframework coreapi django-debug-toolbar
+   pip install -r requirements.txt
    ```
 3. Apply migrations:
    ```
@@ -77,41 +77,6 @@ A RESTful API built with Django REST Framework for managing ride information, wi
    - Added query debugging endpoints
    - Created comparison endpoints to demonstrate performance improvements
    - Implemented error handling throughout the application
-
-### Frontend Implementation
-
-1. **React App Setup**
-   - Created a new React application using create-react-app
-   - Configured Tailwind CSS 3.2.0 for styling
-   - Set up project structure with components, services, and pages directories
-
-2. **API Integration**
-   - Created API service layer with axios for communication with backend
-   - Implemented token-based authentication handling
-   - Set up interceptors to include auth token in all requests
-
-3. **Component Development**
-   - Created layout components (Navbar, Layout) for consistent UI
-   - Built authentication components (LoginForm)
-   - Implemented ride management components (RideList)
-   - Added performance visualization dashboard
-
-4. **Routing**
-   - Set up React Router with protected routes
-   - Implemented authentication state management
-   - Created route navigation between different features
-
-5. **UI/UX Implementation**
-   - Applied Tailwind CSS for responsive design
-   - Added loading states for asynchronous operations
-   - Implemented error handling with user feedback
-   - Created pagination for ride listing
-
-6. **Feature Implementation**
-   - Built login page with authentication
-   - Created ride listing with status indicators
-   - Implemented performance dashboard showing query optimization results
-   - Added user navigation and logout functionality
 
 ## Authentication
 
@@ -289,51 +254,11 @@ The Ride List API is optimized for large datasets:
 
 ## Admin Interface
 
-The admin interface is available at `/admin/` and provides a way to manage all models through a user-friendly interface. 
-
-## Frontend Application
-
-The React frontend provides a user-friendly interface to interact with the Ride Management API:
-
-1. **Login Page**:
-   - Token-based authentication
-   - Error handling with user feedback
-
-2. **Ride Management**:
-   - List of all rides with pagination
-   - Status indicators with color coding
-   - Display of ride details including rider and driver information
-   - Filtering and sorting capabilities
-
-3. **Performance Dashboard**:
-   - Visual representation of query optimization benefits
-   - Comparison between optimized and unoptimized queries
-   - Metrics display for query count and execution time
-
-4. **Responsive Design**:
-   - Mobile-friendly interface
-   - Tailwind CSS for modern styling
-   - Consistent layout across all pages
-
-To run the frontend:
-
-```
-cd frontend/react-client
-npm install
-npm start
-```
+The admin interface is available at `/admin/` and provides a way to manage all models through a user-friendly interface.
 
 ## Technologies Used
 
-### Backend
 - Django 5.2
 - Django REST Framework
 - SQLite (for development)
-- Token Authentication
-
-### Frontend
-- React 18
-- React Router 6
-- Axios for API requests
-- Tailwind CSS 3.2.0
-- Heroicons for UI elements 
+- Token Authentication 
